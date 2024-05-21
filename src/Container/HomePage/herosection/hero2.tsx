@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import backgroundImage3 from "../../../assets/professional-hero-.png";
 const HeroReact2 = () => {
   const [title, setTitle] = useState("We are always here to serve you.");

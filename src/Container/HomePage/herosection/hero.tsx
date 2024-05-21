@@ -1,19 +1,10 @@
-import { useState } from "react";
 import backgroundImage2 from "../../../assets/versatile-interior-designer.png";
 
 // Constantes pour le texte
-const DEFAULT_TITLE = "We are always here to serve you.";
 const MISSION_TEXT =
   "POUR TOUJ BESOINS DE SERVICE DE NEAGE OU DE DECORATION INTERIEUR ";
 
-// Constantes pour les couleurs
-
-const WHITE = "text-white";
-
 const HeroReact1 = () => {
-  const PrimaryColor = "green-700";
-  const title = DEFAULT_TITLE;
-
   return (
     <div
       style={{

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Building2, Home, Info, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const navItems = [
-    { id: 1, text: "Accueil", link: "/" },
-    { id: 2, text: "Company", link: "/company" },
-    { id: 6, text: "Information", link: "/information" },
+    { id: 1, text: "Accueil", link: "/", icon: <Home /> },
+    { id: 2, text: "Company", link: "/company", icon: <Building2 /> },
+    { id: 6, text: "Information", link: "/information", icon: <Info /> },
   ];
 
   const colors = {
@@ -54,7 +54,10 @@ const Navbar = () => {
                 key={item.id}
                 className={`block mt-4 lg:inline-block lg:mt-0 mr-4 ${colors.link}`}
               >
-                {item.text}
+                <div className="flex items-center gap-3">
+                  {item.icon}
+                  {item.text}
+                </div>
               </Link>
             ))}
           </div>
