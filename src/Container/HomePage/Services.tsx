@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 // Todo : Page dédiée aux services de nettoyage
 // Todo : Page dédiée aux services de décoration intérieure
 // Todo : Description détaillée des services de décoration (design d'intérieur, aménagement, etc.)

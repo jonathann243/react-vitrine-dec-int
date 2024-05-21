@@ -5,7 +5,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFoundPage from "./Container/NotFoundPage";
 import PageX from "./Container/PageX.tsx";
-import Information from "./Container/Information.tsx";
 
 const router = createBrowserRouter([
   {

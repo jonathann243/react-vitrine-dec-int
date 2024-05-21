@@ -1,5 +1,3 @@
-import React from "react";
-
 //ToDO: Galerie de photos mettant en valeur les réalisations précédentes (nettoyage et décoration)
 //ToDO: Possibilité de filtrer les photos par type de service Galerie de photos et/ou vidéos de vos projets précédents.
 // ToDO: Descriptions des projets avec les défis rencontrés et les solutions apportées.

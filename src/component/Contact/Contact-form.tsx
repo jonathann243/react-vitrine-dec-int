@@ -1,29 +1,37 @@
-// File: ContactForm.tsx
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { formSchema } from "./Icon-Schema";
 
-export default function ContactForm() {
-  const form = useRef();
-  //const [errors, setErrors] = useState({});
-  const [errors, setErrors] = useState<string[]>([]);
-  const [submissionResult, setSubmissionResult] = useState(null);
+interface SubmissionResult {
+  type: "success" | "error";
+  message: string;
+}
 
-  const sendEmail = (e) => {
+export default function ContactForm() {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [errors, setErrors] = useState<string[]>([]);
+  const [submissionResult, setSubmissionResult] =
+    useState<SubmissionResult | null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const formElement = form.current;
+    if (!formElement) return;
+
     const formValues = {
-      user_name: form.current.user_name.value,
-      user_email: form.current.user_email.value,
-      message: form.current.message.value,
+      user_name: formElement.user_name.value,
+      user_email: formElement.user_email.value,
+      message: formElement.message.value,
     };
+
     console.log(errors);
 
     formSchema
       .validate(formValues)
       .then(() => {
         emailjs
-          .sendForm("service_mdexu09", "template_id2227f", form.current, {
+          .sendForm("service_mdexu09", "template_id2227f", formElement, {
             publicKey: "p7v9GVzI9t0-xBqvJ",
           })
           .then(

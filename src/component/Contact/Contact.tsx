@@ -5,9 +5,8 @@
 // Todo : Galerie de photos de réalisations précédentes
 // Todo : Avantages de chaque service. || Tarification (si possible).
 // Todo : Témoignages ou exemples de clients satisfaits pour chaque service.
-import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
-import { PhoneSVG, PhonSvg, formSchema } from "./Icon-Schema";
+
+import { PhoneSVG, PhonSvg } from "./Icon-Schema";
 import ContactForm from "./Contact-form";
 
 export default function Contact() {

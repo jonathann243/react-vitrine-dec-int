@@ -1,4 +1,3 @@
-import React from "react";
 // Todo : Histoire de votre entreprise.
 // Todo : Présentation détaillée  (histoire, mission, valeurs)
 // Todo : Valeurs et engagements envers les clients.
