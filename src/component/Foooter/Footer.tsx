@@ -1,19 +1,6 @@
-import React from "react";
 import NavLLink from "./NavLLink";
 import SocialLink from "./SocialLink";
 // Constantes pour les couleurs et les classes CSS réutilisables
-const colors = {
-  primary: "#00df9a",
-  secondary: "indigo-500",
-  textPrimary: "gray-500",
-  textHover: "black",
-  textSecondary: "gray-400",
-};
-
-const classes = {
-  navLink: `text-${colors.textPrimary} transition duration-100 hover:text-${colors.secondary} active:text-${colors.secondary}`,
-  socialLink: `text-${colors.textSecondary} transition duration-100 hover:text-gray-500 active:text-gray-600`,
-};
 
 const Footer = () => {
   return (
