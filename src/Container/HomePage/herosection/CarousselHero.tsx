@@ -7,7 +7,8 @@ import "swiper/css/effect-fade";
 import "../../../App.css";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import HeroReact1 from "./hero";
-import HeroReact2 from "./hero2";
+import backgroundImage3 from "../../../assets/professional-hero-.png";
+import backgroundImage2 from "../../../assets/versatile-interior-designer.png";
 
 export default function App() {
   const progressCircle = useRef<HTMLDivElement>(null);
@@ -33,10 +34,10 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <HeroReact1 />
+          <HeroReact1 backgroundImage={backgroundImage2} />
         </SwiperSlide>
         <SwiperSlide>
-          <HeroReact2 />
+          <HeroReact1 backgroundImage={backgroundImage3} />
         </SwiperSlide>
       </Swiper>
     </>

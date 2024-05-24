@@ -14,7 +14,13 @@ import img21 from "../../assets/portfolioIMG/portrait-homme-faisant-taches-menag
 import img30 from "../../assets/portfolioIMG/salon-luxe-loft-rendu-3d-etagere-pres-table-manger_105762-2053.jpg";
 import img42 from "../../assets/portfolioIMG/orange_paint_boy.jpg";
 
-const images = [
+interface Image {
+  src: string;
+  alt: string;
+  category: string;
+}
+
+const images: Image[] = [
   {
     src: imgBigo,
     alt: "Homme avec produits de nettoyage",
@@ -37,15 +43,26 @@ const images = [
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("Tous");
+  const [selectedImg, setSelectedImg] = useState<Image | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   const filteredImages = images.filter(
     (image) => filter === "Tous" || image.category === filter
   );
 
+  const handleImageClick = (img: Image) => {
+    setSelectedImg(img);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <section className="py-6 bg-gray-100 dark:bg-gray-200 dark:text-gray-30">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="mb-auto text-xl font-bold text-gray-800 p-7 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
             NOS RÉALISATIONS
           </h2>
@@ -81,17 +98,36 @@ export default function Portfolio() {
               Décoration
             </button>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-4 mx-auto md:grid-cols-6">
+          <div className="grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
             {filteredImages.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={img.alt}
-                className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                className="object-cover w-full h-full shadow-sm cursor-pointer rounded-xl min-h-48 dark:bg-gray-500 aspect-square"
+                onClick={() => handleImageClick(img)}
               />
+
             ))}
           </div>
         </div>
+        {showModal && selectedImg && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="p-4 bg-white rounded-lg">
+              <img
+                src={selectedImg.src}
+                alt={selectedImg.alt}
+                className="h-[500px] max-w-full"
+              />
+              <button
+                onClick={closeModal}
+                className="p-2 mt-4 text-white bg-red-500 rounded"
+              >
+                Fermer
+              </button>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );

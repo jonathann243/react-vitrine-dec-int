@@ -53,7 +53,7 @@ const COLORS = {
 export default function Services() {
   return (
     <div className="p-16 ">
-      <h2 className="p-10 mt-8 mb-auto text-xl font-bold text-gray-800 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
+      <h2 className="p-10 mt-8 mb-auto text-xl font-bold text-center text-gray-800 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
         NOS SERVICES
       </h2>
 

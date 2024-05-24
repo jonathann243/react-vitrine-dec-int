@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
-import backgroundImage2 from "../../../assets/versatile-interior-designer.png";
+import { HashLink as Link } from "react-router-hash-link";
 import ButtonComponent from "../../../component/ButtonComponent";
 
 // Constantes pour le texte
 const MISSION_TEXT =
-  "POUR TOUJ BESOINS DE SERVICE DE NEAGE OU DE DECORATION INTERIEUR ";
+  "Pour tous vos besoins de service de nettoyage ou de décoration intérieure.";
 
-const HeroReact1 = () => {
+const HeroReact1 = ({ backgroundImage }: { backgroundImage: string }) => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%), url(${backgroundImage2})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%), url(${backgroundImage})`,
         backgroundBlendMode: "multiply",
       }}
       className="relative flex flex-col w-full min-h-screen bg-left-bottom bg-no-repeat bg-cover sm:bg-center"
@@ -30,7 +29,7 @@ const HeroReact1 = () => {
           >
             {MISSION_TEXT}
           </h1>
-          <Link to="/contact">
+          <Link to="/#contact" smooth>
             <ButtonComponent text="Nous joindre" />
           </Link>
         </div>
