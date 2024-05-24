@@ -11,7 +11,7 @@ import ContactForm from "./Contact-form";
 
 export default function Contact() {
   const title = "Contactez-nous dès aujourd'hui";
-  const subtitle = "Prenez contact";
+  const subtitle = "Joignez-nous";
   const formDescription =
     "Remplissez le formulaire pour commencer une conversation";
   const address = "Adresse fictive, 9999 Ville";
@@ -25,7 +25,7 @@ export default function Contact() {
           {title}
         </h2>
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-          <div className="py-6 md:py-6 md:px-6">
+          <div className="px-6 py-6 md:py-6 md:px-6">
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
               {subtitle}
             </h3>

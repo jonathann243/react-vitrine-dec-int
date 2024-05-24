@@ -21,13 +21,11 @@ const CONTENT = [
         preserveAspectRatio: "xMidYMid slice",
       },
     },
-    description:
-      "Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.",
     moreInfo:
-      "Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst before they sold out four loko. 3 wolf moon brooklyn.",
+      "Découvrez notre service de nettoyage professionnel, adapté à tous les espaces, qu'ils soient résidentiels ou commerciaux. Nous utilisons des produits écologiques et des techniques avancées pour garantir un environnement propre et sain. Notre équipe expérimentée s'engage à fournir un service de qualité supérieure, en mettant l'accent sur la minutie et le souci du détail. Faites confiance à notre expertise pour un espace impeccablement propre qui reflète votre professionnalisme et votre souci du bien-être.",
   },
   {
-    name: "Decauration interieur",
+    name: "Décoration intérieure",
     defaultOptions: {
       loop: true,
       autoplay: true,
@@ -36,10 +34,8 @@ const CONTENT = [
         preserveAspectRatio: "xMidYMid slice",
       },
     },
-    description:
-      "Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.",
     moreInfo:
-      "Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst before they sold out four loko. 3 wolf moon brooklyn.",
+      "Transformez votre espace avec notre service de décoration intérieure. Que vous souhaitiez rafraîchir une pièce ou repenser entièrement votre intérieur, nos designers expérimentés travaillent avec vous pour créer un environnement qui correspond parfaitement à votre style et à vos besoins. Nous combinons esthétique, fonctionnalité et innovation pour concevoir des espaces qui améliorent votre quotidien. Laissez-nous vous aider à réaliser l'intérieur de vos rêves avec créativité et précision.",
   },
   // Add more objects for more content sections
 ];
@@ -56,8 +52,8 @@ const COLORS = {
 
 export default function Services() {
   return (
-    <div>
-      <h2 className="mb-auto text-2xl font-bold text-center text-gray-800 md:mb-12 lg:text-3xl">
+    <div className="p-16 ">
+      <h2 className="p-10 mt-8 mb-auto text-xl font-bold text-gray-800 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
         NOS SERVICES
       </h2>
 
