@@ -1,83 +1,96 @@
-//ToDO: Galerie de photos mettant en valeur les réalisations précédentes (nettoyage et décoration)
-//ToDO: Possibilité de filtrer les photos par type de service Galerie de photos et/ou vidéos de vos projets précédents.
-// ToDO: Descriptions des projets avec les défis rencontrés et les solutions apportées.
-// ToDO: Réactions des clients (le cas échéant)
-import img11 from "../../assets/personnes-qui-s-occupent-du-nettoyage-bureaux.jpg"; //11
-import img22 from "../../assets/portfolioIMG/2150453317.jpg"; //22//32
-import img12 from "../../assets/portfolioIMG/Cleaningmen.jpg"; //12
-import img41 from "../../assets/portfolioIMG/conception-salle-interieure-fauteuil-plantes-pot_23-2149427991.jpg"; //41
-import imgBigo from "../../assets/portfolioIMG/man-with-cleaning-products2.jpg"; //13//23
-import img31 from "../../assets/portfolioIMG/image1.png"; //31
-import img32 from "../../assets/portfolioIMG/2150453317.jpg"; //22 //32
-import img21 from "../../assets/portfolioIMG/portrait-homme-faisant-taches-menageres-participant-au-nettoyage-maison_23-2151468781.jpg"; // 21
-import img30 from "../../assets/portfolioIMG/salon-luxe-loft-rendu-3d-etagere-pres-table-manger_105762-2053.jpg"; //30
-import img42 from "../../assets/portfolioIMG/orange_paint_boy.jpg"; //42
+// Galerie de photos et vidéos mettant en valeur les réalisations précédentes (nettoyage et décoration)
+// Possibilité de filtrer les photos par type de service
+// Descriptions des projets avec les défis rencontrés et les solutions apportées.
+// Réactions des clients (le cas échéant)
+import { useState } from "react";
+import img11 from "../../assets/personnes-qui-s-occupent-du-nettoyage-bureaux.jpg";
+import img22 from "../../assets/portfolioIMG/2150453317.jpg";
+import img12 from "../../assets/portfolioIMG/Cleaningmen.jpg";
+import img41 from "../../assets/portfolioIMG/conception-salle-interieure-fauteuil-plantes-pot_23-2149427991.jpg";
+import imgBigo from "../../assets/portfolioIMG/man-with-cleaning-products2.jpg";
+import img31 from "../../assets/portfolioIMG/image1.png";
+import img32 from "../../assets/portfolioIMG/2150453317.jpg";
+import img21 from "../../assets/portfolioIMG/portrait-homme-faisant-taches-menageres-participant-au-nettoyage-maison_23-2151468781.jpg";
+import img30 from "../../assets/portfolioIMG/salon-luxe-loft-rendu-3d-etagere-pres-table-manger_105762-2053.jpg";
+import img42 from "../../assets/portfolioIMG/orange_paint_boy.jpg";
+
+const images = [
+  {
+    src: imgBigo,
+    alt: "Homme avec produits de nettoyage",
+    category: "Nettoyage",
+  },
+  { src: img11, alt: "Nettoyage de bureaux", category: "Nettoyage" },
+  { src: img12, alt: "Personnel de nettoyage", category: "Nettoyage" },
+  {
+    src: img21,
+    alt: "Homme faisant des tâches ménagères",
+    category: "Nettoyage",
+  },
+  { src: img22, alt: "Nettoyage professionnel", category: "Nettoyage" },
+  { src: img31, alt: "Image de nettoyage", category: "Nettoyage" },
+  { src: img32, alt: "Nettoyage intensif", category: "Nettoyage" },
+  { src: img41, alt: "Conception d'intérieur", category: "Décoration" },
+  { src: img42, alt: "Peinture d'intérieur", category: "Décoration" },
+  { src: img30, alt: "Salon de luxe", category: "Décoration" },
+];
 
 export default function Portfolio() {
+  const [filter, setFilter] = useState("Tous");
+
+  const filteredImages = images.filter(
+    (image) => filter === "Tous" || image.category === filter
+  );
+
   return (
     <div>
-      <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
-        <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
-          <img
-            src={imgBigo}
-            alt=""
-            className="object-cover w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img11}
-            // src="https://source.unsplash.com/random/200x200/?0"
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img12}
-            // src="https://source.unsplash.com/random/200x200/?1"
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            // src="https://source.unsplash.com/random/200x200/?2"
-            src={img21}
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            // src="https://source.unsplash.com/random/200x200/?3"
-            src={img22}
-          />
-          {/*----------------*/}
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            // src="https://source.unsplash.com/random/200x200/?4"
-            src={img31}
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img32}
-            //src="https://source.unsplash.com/random/200x200/?5"
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img41}
-            //src="https://source.unsplash.com/random/200x200/?6"
-          />
-          <img
-            alt=""
-            className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img42}
-            //src="https://source.unsplash.com/random/200x200/?7"
-          />
-          <img
-            src={img30}
-            // src="https://source.unsplash.com/random/302x302/"
-            alt=""
-            className="object-cover w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
+      <section className="py-6 bg-gray-100 dark:bg-gray-200 dark:text-gray-30">
+        <div className="container">
+          <h2 className="mb-auto text-xl font-bold text-gray-800 p-7 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
+            NOS RÉALISATIONS
+          </h2>
+          <div className="flex justify-center mb-4">
+            <button
+              className={`p-2 mx-2 rounded-lg shadow-lg ${
+                filter === "Tous"
+                  ? "bg-green-600 text-white"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+              onClick={() => setFilter("Tous")}
+            >
+              Tous
+            </button>
+            <button
+              className={`p-2 mx-2 rounded-lg shadow-lg ${
+                filter === "Nettoyage"
+                  ? "bg-green-600 text-white"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+              onClick={() => setFilter("Nettoyage")}
+            >
+              Nettoyage
+            </button>
+            <button
+              className={`p-2 mx-2 rounded-lg shadow-lg ${
+                filter === "Décoration"
+                  ? "bg-green-600 text-white"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+              onClick={() => setFilter("Décoration")}
+            >
+              Décoration
+            </button>
+          </div>
+          <div className="grid grid-cols-3 gap-4 p-4 mx-auto md:grid-cols-6">
+            {filteredImages.map((img, index) => (
+              <img
+                key={index}
+                src={img.src}
+                alt={img.alt}
+                className="object-cover w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>
