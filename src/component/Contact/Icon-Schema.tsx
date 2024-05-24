@@ -1,9 +1,15 @@
 import * as Yup from "yup";
 
 export const formSchema = Yup.object().shape({
-  user_name: Yup.string().required("Full name is required"),
-  user_email: Yup.string().email("Invalid email").required("Email is required"),
-  message: Yup.string().required("Message is required"),
+  user_name: Yup.string().required(
+    "Le nom complet est obligatoire est obligatoire"
+  ),
+  user_email: Yup.string()
+    .email("Le nom complet est obligatoire est obligatoire")
+    .required("Email is required"),
+  message: Yup.string().required(
+    "Le nom complet est obligatoire est obligatoire"
+  ),
 });
 export function PhoneSVG() {
   return (

@@ -10,22 +10,23 @@ import { PhoneSVG, PhonSvg } from "./Icon-Schema";
 import ContactForm from "./Contact-form";
 
 export default function Contact() {
-  const title = "Contact us today";
-  const subtitle = "Get in touch";
-  const formDescription = "Fill in the form to start a conversation";
-  const address = "Fake address, 9999 City";
-  const phoneNumber = "5146682168";
-  const email = "contact@business.com";
+  const title = "Contactez-nous dès aujourd'hui";
+  const subtitle = "Prenez contact";
+  const formDescription =
+    "Remplissez le formulaire pour commencer une conversation";
+  const address = "Adresse fictive, 9999 Ville";
+  const phoneNumber = "514-668-2168";
+  const email = "contact@entreprise.com";
 
   return (
     <div>
-      <h2 className="mb-auto text-2xl font-bold text-center text-gray-800 md:mb-12 lg:text-3xl">
-        {title}
-      </h2>
-      <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
+      <section className="p-6 bg-green-30 dark:bg-gray-100 dark:text-gray-900">
+        <h2 className="p-6 mb-auto text-2xl font-bold text-gray-800 md:text-center md:mb-12 lg:text-3xl">
+          {title}
+        </h2>
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-          <div className="py-6 md:py-0 md:px-6">
-            <h3 className="mb-auto text-2xl font-bold text-gray-800 md:mb-12 lg:text-3xl">
+          <div className="py-6 md:py-6 md:px-6">
+            <h3 className="mb-4 text-xl font-semibold text-gray-800">
               {subtitle}
             </h3>
             <p className="pt-2 pb-4">{formDescription}</p>
@@ -39,17 +40,16 @@ export default function Contact() {
                 <PhonSvg />
                 <a
                   href={`tel:${phoneNumber}`}
-                  className="text-blue-500 hover:text-blue-700"
+                  className="font-semibold text-green-900 hover:text-green-900"
                 >
                   {phoneNumber}
                 </a>
               </p>
               <p className="flex items-center">
-                {/* Email SVG */}
                 <PhoneSVG />
                 <a
                   href={`mailto:${email}`}
-                  className="text-blue-500 hover:text-blue-700"
+                  className="font-semibold text-green-900 hover:text-green-500"
                 >
                   {email}
                 </a>

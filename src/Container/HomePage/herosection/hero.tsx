@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import backgroundImage2 from "../../../assets/versatile-interior-designer.png";
+import ButtonComponent from "../../../component/ButtonComponent";
 
 // Constantes pour le texte
 const MISSION_TEXT =
@@ -28,12 +30,9 @@ const HeroReact1 = () => {
           >
             {MISSION_TEXT}
           </h1>
-
-          <button
-            className={`p-4 mb-6 mt-6 bg-green-700 font-semibold text-white transition-all duration-500 transform hover:scale-110   rounded hover:border-2 hover:border-green-500 hover:text-white`}
-          >
-            Nous joindre
-          </button>
+          <Link to="/contact">
+            <ButtonComponent text="Nous joindre" />
+          </Link>
         </div>
       </div>
     </div>
