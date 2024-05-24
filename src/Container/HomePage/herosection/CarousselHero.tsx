@@ -25,6 +25,10 @@ export default function App() {
         spaceBetween={30}
         centeredSlides={true}
         effect={"fade"}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
