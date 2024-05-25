@@ -52,8 +52,8 @@ const COLORS = {
 
 export default function Services() {
   return (
-    <div className="p-16 ">
-      <h2 className="p-10 mt-8 mb-auto text-xl font-bold text-center text-gray-800 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
+    <div>
+      <h2 className="p-10 mb-auto text-xl font-bold text-center text-gray-800 sm:text-2xl md:text-center lg:text-3xl whitespace-nowrap">
         NOS SERVICES
       </h2>
 
@@ -83,7 +83,7 @@ export default function Services() {
                   <div
                     className={`pt-4 mt-4 text-center border-t ${COLORS.borderGray} sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left`}
                   >
-                    <p className="mb-4 text-xl leading-relaxed">
+                    <p className="mb-4 text-xl leading-relaxed text-justify">
                       {item.moreInfo}
                     </p>
                   </div>

@@ -15,9 +15,16 @@ const navItems: NavItem[] = [
   { id: 3, text: "Informations", link: "/information", icon: <Info /> },
   { id: 2, text: "Contact", link: "/contact", icon: <Mail /> },
 ];
+import { useParams } from "react-router-dom";
 
 const Navbar: FC = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const params = useParams();
+  if (Object.values(params).includes("")) {
+    console.log("Un ou plusieurs paramètres de route sont vides:", params);
+  } else {
+    console.log("Tous les paramètres de route sont remplis:", params);
+  }
 
   const colors = {
     navbar: "bg-black",
@@ -26,8 +33,18 @@ const Navbar: FC = () => {
   };
 
   return (
-    <div className="absolute z-40 w-full backdrop-blur-sm">
+    <div
+      className={`${
+        Object.values(params).includes("")
+          ? "absolute z-40 w-full backdrop-blur-sm"
+          : "bg-black"
+      }`}
+    >
       <nav
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%)",
+        }}
         className={`flex items-center justify-between flex-wrap p-6 ${colors.navbar}`}
       >
         <Logo />
