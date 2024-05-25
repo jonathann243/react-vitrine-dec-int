@@ -1,4 +1,3 @@
-import React from "react";
 import { User, Globe, Shield, FileText, PhoneCall } from "lucide-react";
 
 const informationCollectionData = [

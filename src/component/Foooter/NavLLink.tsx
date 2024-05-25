@@ -1,10 +1,7 @@
 import { Building2, Home, Info, Mail, Shield } from "lucide-react";
-import React from "react";
+
 import { Link } from "react-router-dom";
 
-interface NavLinkProps {
-  text: string;
-}
 const navItems: NavItem[] = [
   { id: 1, text: "Accueil", link: "/", icon: <Home /> },
   { id: 4, text: "Entreprise", link: "/company", icon: <Building2 /> },
