@@ -87,27 +87,39 @@ interface NavLinksProps {
   colors: { [key: string]: string };
 }
 
-const NavLinks: FC<NavLinksProps> = ({ navOpen, colors }) => (
-  <div
-    className={`${
-      navOpen ? "block" : "hidden"
-    } w-full block flex-initial lg:flex lg:items-center lg:w-auto`}
-  >
-    <div className="text-sm font-bold lg:flex-grow ">
-      {navItems.map((item) => (
-        <Link
-          to={item.link}
-          key={item.id}
-          className={`block mt-4 lg:inline-block lg:mt-0 mr-4 ${colors.link}`}
-        >
-          <div className="flex items-center gap-3">
-            {item.icon}
-            {item.text}
-          </div>
-        </Link>
-      ))}
+import { useLocation } from "react-router-dom";
+
+const NavLinks: FC<NavLinksProps> = ({ navOpen, colors }) => {
+  const location = useLocation();
+
+  return (
+    <div
+      className={`${
+        navOpen ? "block" : "hidden"
+      } w-full block flex-initial lg:flex lg:items-center lg:w-auto`}
+    >
+      <div className="text-sm font-bold lg:flex-grow">
+        {navItems.map((item) => (
+          <Link
+            to={item.link}
+            key={item.id}
+            className={`block mt-4 lg:inline-block lg:mt-0 mr-4 ${
+              colors.link
+            } ${
+              location.pathname === item.link
+                ? "border-b-4 border-green-800 rounded-lg p-1 border-opacity-50"
+                : ""
+            }`}
+          >
+            <div className="flex items-center gap-3">
+              {item.icon}
+              {item.text}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Navbar;
