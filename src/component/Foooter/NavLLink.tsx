@@ -1,6 +1,6 @@
 import { Building2, Home, Info, Mail, Shield } from "lucide-react";
 
-import { Link } from "react-router-dom";
+import { Link, To } from "react-router-dom";
 
 const navItems: NavItem[] = [
   { id: 1, text: "Accueil", link: "/", icon: <Home /> },
@@ -20,7 +20,12 @@ const NavLLinks = () => (
   <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
     {navItems.map((item) => (
       <Link
-        to={item.link}
+        to={
+          {
+            pathname: item.link,
+            state: { scroll: "top" },
+          } as To
+        }
         key={item.id}
         className={`block `}
         onClick={() => console.log(`Navigating to ${item.text}`)}
