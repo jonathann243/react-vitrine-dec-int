@@ -1,7 +1,7 @@
 import { useState, FC } from "react";
 import { Building2, Home, Info, Mail, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import Logoss from "../assets/logo/picsvg_download.svg";
 interface NavItem {
   id: number;
   text: string;
@@ -37,13 +37,13 @@ const Navbar: FC = () => {
       className={`${
         Object.values(params).includes("")
           ? "absolute z-40 w-full backdrop-blur-sm"
-          : "bg-black"
+          : "bg-teal-900"
       }`}
     >
       <nav
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 100%)",
         }}
         className={`flex items-center justify-between flex-wrap p-6 ${colors.navbar}`}
       >
@@ -57,7 +57,9 @@ const Navbar: FC = () => {
 
 const Logo: FC = () => (
   <div className="flex items-center flex-shrink-0 mr-6 text-white">
-    <span className="text-xl font-semibold tracking-tight">Logo</span>
+    <div className="flex items-center justify-center">
+      <img src={Logoss} alt="Logo" className="w-auto h-12" />
+    </div>
   </div>
 );
 
