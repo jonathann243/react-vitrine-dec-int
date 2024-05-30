@@ -12,19 +12,6 @@ import x from "../../assets/AnimationClean.json";
 import x2 from "../../assets/Animation - 1111111111111112.json";
 const CONTENT = [
   {
-    name: "Service de nettoyage",
-    defaultOptions: {
-      loop: true,
-      autoplay: true,
-      animationData: x,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice",
-      },
-    },
-    moreInfo:
-      "Découvrez notre service de nettoyage professionnel, adapté à tous les espaces, qu'ils soient résidentiels ou commerciaux. Nous utilisons des produits écologiques et des techniques avancées pour garantir un environnement propre et sain. Notre équipe expérimentée s'engage à fournir un service de qualité supérieure, en mettant l'accent sur la minutie et le souci du détail. Faites confiance à notre expertise pour un espace impeccablement propre qui reflète votre professionnalisme et votre souci du bien-être.",
-  },
-  {
     name: "Décoration intérieure",
     defaultOptions: {
       loop: true,
@@ -35,7 +22,20 @@ const CONTENT = [
       },
     },
     moreInfo:
-      "Transformez votre espace avec notre service de décoration intérieure. Que vous souhaitiez rafraîchir une pièce ou repenser entièrement votre intérieur, nos designers expérimentés travaillent avec vous pour créer un environnement qui correspond parfaitement à votre style et à vos besoins. Nous combinons esthétique, fonctionnalité et innovation pour concevoir des espaces qui améliorent votre quotidien. Laissez-nous vous aider à réaliser l'intérieur de vos rêves avec créativité et précision.",
+      "Confrontés à des espaces qui ne répondent pas à vos attentes esthétiques ou fonctionnelles ? Notre service de décoration intérieure transforme tout challenge en opportunité. Collaborant étroitement avec vous, nos designers créent des intérieurs sur mesure qui allient style, confort et innovation, pour un quotidien amélioré et un espace qui vous ressemble vraiment.",
+  },
+  {
+    name: "Service de nettoyage",
+    defaultOptions: {
+      loop: true,
+      autoplay: true,
+      animationData: x,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    },
+    moreInfo:
+      "Face aux défis de maintenir des espaces propres et sains, notre service de nettoyage professionnel offre une solution sur mesure pour les environnements résidentiels et commerciaux. Utilisant des produits écologiques et des techniques de pointe, notre équipe expérimentée garantit un cadre impeccable, reflétant votre engagement envers le bien-être et le professionnalisme.",
   },
   // Add more objects for more content sections
 ];

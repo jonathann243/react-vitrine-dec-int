@@ -29,21 +29,21 @@ const Navbar: FC = () => {
   const colors = {
     navbar: "bg-black",
     button: "text-teal-200 border-teal-400 hover:text-white hover:border-white",
-    link: "text-white text-lg font-semibold tracking-tight hover:text-white tracking-wide border-2 border-transparent hover:border-teal-500 hover:rounded-lg px-5 hover:border-opacity-50",
+    link: "text-white text-lg font-semibold tracking-tight border-b-1 border-teal-300 px-2 mx-4 hover:text-teal-300  ",
   };
 
   return (
     <div
       className={`${
-        Object.values(params).includes("")
-          ? "absolute z-40 w-full backdrop-blur-sm"
+        Object.values(params).includes("") && navOpen === false
+          ? "absolute z-40 w-full "
           : "bg-teal-900"
       }`}
     >
       <nav
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 100%)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 30%)",
         }}
         className={`flex items-center justify-between flex-wrap p-6 ${colors.navbar}`}
       >
@@ -109,7 +109,7 @@ const NavLinks: FC<NavLinksProps> = ({ navOpen, colors }) => {
               colors.link
             } ${
               location.pathname === item.link
-                ? "border-b-4 border-green-800 rounded-lg p-1 border-opacity-50"
+                ? "border-b-2 border-teal-800  pb-2  border-opacity-90 "
                 : ""
             }`}
           >
