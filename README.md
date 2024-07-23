@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# Site Web de Rénovation Intérieure et Nettoyage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est un site web dédié aux services de rénovation intérieure et de nettoyage. Il est construit avec React, TypeScript, et Vite pour une expérience utilisateur fluide et rapide.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Rénovation Intérieure**: Découvrez nos services de rénovation pour transformer votre espace de vie ou de travail.
+-   **Nettoyage**: Nous offrons des services de nettoyage complets pour maintenir votre espace propre et accueillant.
+-   **Devis en Ligne**: Obtenez rapidement un devis pour nos services directement sur le site.
 
-## Expanding the ESLint configuration
+## Technologies Utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-   React 18.2
+-   TypeScript 5.2
+-   Vite 5.2
+-   TailwindCSS 3.4
+-   ESLint 8.57
+-   PostCSS 8.4
+-   Swipper : Caroussels
+-   emailjs-com : envoyer Coordoner client une fois le formulaire soumis
 
-- Configure the top-level `parserOptions` property like this:
+## Aperçu du Site
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+# ![Aperçu du Site](imgReadme/Untitled%20video%20-%20Made%20with%20Clipchamp.gif)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# ![Aperçu du Site](imgReadme/Screenshot%202024-07-22%20232033.png) ![Aperçu du Site](imgReadme/Screenshot%202024-07-22%20232052.png)
+
+# ![Aperçu du Site](imgReadme/Screenshot%202024-07-22%20232105.png) ![Aperçu du Site](imgReadme/Screenshot%202024-07-22%20232119.png)
+
+## Démarrage Rapide
+
+Pour lancer le projet localement, suivez ces étapes :
+
+1. Clonez le dépôt :
+    ```bash
+    git clone votre_lien_de_dépôt
+    ```
